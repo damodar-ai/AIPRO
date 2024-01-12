@@ -1,8 +1,6 @@
 import streamlit as st
 import pickle
 
-
-
 lin_model=pickle.load(open('lin_model.pkl','rb'))
 log_model=pickle.load(open('log_model.pkl','rb'))
 svm=pickle.load(open('svm.pkl','rb'))
@@ -25,6 +23,8 @@ def main():
     <h5 style="color:black;text-align:center;">Project By:-Shrey Kumar</h5>
     </div>
     """
+
+    
     st.markdown(html_temp, unsafe_allow_html=True)
     activities=['Linear Regression','Logistic Regression','SVM']
     option=st.sidebar.selectbox('Which model would you like to use?',activities)
